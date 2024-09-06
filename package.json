@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build/src/index.html"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.78.0"
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
   }
 }
