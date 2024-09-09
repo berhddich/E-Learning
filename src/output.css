@@ -641,6 +641,14 @@ section{
   position: relative;
 }
 
+.-bottom-4{
+  bottom: -1rem;
+}
+
+.-left-4{
+  left: -1rem;
+}
+
 .left-0{
   left: 0px;
 }
@@ -666,6 +674,10 @@ section{
   margin-right: auto;
 }
 
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .ml-4{
   margin-left: 1rem;
 }
@@ -682,12 +694,20 @@ section{
   height: 3.5rem;
 }
 
+.w-28{
+  width: 7rem;
+}
+
 .w-60{
   width: 15rem;
 }
 
 .w-full{
   width: 100%;
+}
+
+.basis-1\/3{
+  flex-basis: 33.333333%;
 }
 
 @keyframes move{
@@ -732,6 +752,14 @@ section{
   gap: 1.25rem;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .border-b{
   border-bottom-width: 1px;
 }
@@ -746,6 +774,26 @@ section{
   background-color: rgb(1 10 94 / var(--tw-bg-opacity));
 }
 
+.bg-secondaryColor{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 204 0 / var(--tw-bg-opacity));
+}
+
+.bg-greenColor{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 121 54 / var(--tw-bg-opacity));
+}
+
+.bg-redColor{
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 52 51 / var(--tw-bg-opacity));
+}
+
+.bg-blackColor{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -754,6 +802,11 @@ section{
 .py-14{
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .text-center{
@@ -784,6 +837,11 @@ section{
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .uppercase{
   text-transform: uppercase;
 }
@@ -791,6 +849,11 @@ section{
 .text-secondaryColor{
   --tw-text-opacity: 1;
   color: rgb(255 204 0 / var(--tw-text-opacity));
+}
+
+.text-blackColor{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .duration-200{
@@ -801,7 +864,8 @@ section{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.hometitle{
+.hometitle,
+    .cardtitle{
   font-family: Oswald, sans-serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -810,10 +874,16 @@ section{
 }
 
 @media (min-width: 1024px){
-  .hometitle{
+  .hometitle,
+    .cardtitle{
     font-size: 3.75rem;
     line-height: 1;
   }
+}
+
+.cardtitle{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .separator{
@@ -867,8 +937,16 @@ section{
     width: 100%;
   }
 
+  .md\:flex-1{
+    flex: 1 1 0%;
+  }
+
   .md\:basis-1\/2{
     flex-basis: 50%;
+  }
+
+  .md\:basis-1\/3{
+    flex-basis: 33.333333%;
   }
 
   .md\:flex-row{

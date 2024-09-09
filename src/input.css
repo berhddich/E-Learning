@@ -31,8 +31,14 @@
 }
 
 @layer utilities {
-    .hometitle {
+
+    .hometitle,
+    .cardtitle {
         @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
+    }
+
+    .cardtitle {
+        @apply text-xl;
     }
 
     .separator {
