@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+
     <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
     <link
       rel="shortcut icon"
       href="assets/img/favicon.png"
       type="image/x-icon"
     />
+
     <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
     <link
       rel="stylesheet"
@@ -25,45 +27,161 @@
       rel="stylesheet"
     />
 
-    <title>BB burger</title>
+    <!--  Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="output.css" rel="stylesheet" />
+
+    <title>responsive || burger website</title>
   </head>
   <body>
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
     <header class="bg-primaryColor fixed top-0 left-0 w-full z-50">
-      <nav class="container relative h-14 flex justify-between items-center">
+      <div class="container relative h-14 flex justify-between items-center">
         <div>
-          <a href="" class="text-2xl uppercase"
-            >Bur<span class="text-secondaryColor font-oswald">ger</span></a
+          <a href="#" class="text-2xl uppercase font-oswald"
+            >Bur<span class="text-secondaryColor">ger</span></a
           >
         </div>
         <div
-          class="absolute top-0 left-0 w-full py-14 bg-primaryColor border-b border-secondaryColor"
+          id="mobileMenu"
+          class="hidden absolute top-0 left-0 w-full py-14 bg-primaryColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto"
         >
-          <ul class="flex flex-col text-center gap-5">
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
             <li>
-              <a class="hover:text-secondaryColor ease-in" href="#Home">Home</a>
+              <a
+                class="navlink hover:text-secondaryColor ease-in duration-200"
+                href="#Home"
+                >Home</a
+              >
             </li>
             <li>
-              <a class="hover:text-secondaryColor ease-in" href="">About Us</a>
+              <a
+                class="navlink hover:text-secondaryColor ease-in duration-200"
+                href="#about"
+                >About Us</a
+              >
             </li>
             <li>
-              <a class="hover:text-secondaryColor ease-in" href="">Menu</a>
+              <a
+                class="navlink hover:text-secondaryColor ease-in duration-200"
+                href="#menu"
+                >Menu</a
+              >
             </li>
             <li>
-              <a class="hover:text-secondaryColor ease-in" href="">Review</a>
+              <a
+                class="navlink hover:text-secondaryColor ease-in duration-200"
+                href="#review"
+                >Review</a
+              >
             </li>
             <li>
-              <a class="hover:text-secondaryColor ease-in" href="">Contact</a>
+              <a
+                class="navlink hover:text-secondaryColor ease-in duration-200"
+                href="#contact"
+                >Contact</a
+              >
             </li>
           </ul>
-          <div><i class="ri-close-line"></i></div>
-        </div>
-        <div>
-          <i class="ri-moon-line"></i>
-          <div>
-            <i class="ri-menu-2-line"></i>
+          <div
+            id="closenav"
+            class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden"
+          >
+            <i class="ri-close-line"></i>
           </div>
         </div>
-      </nav>
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line cursor-pointer ml-4 text-xl"></i>
+          <div id="hamburger">
+            <i class="ri-menu-2-line cursor-pointer text-xl md:hidden"></i>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+            <img
+              class="w-60 md:w-full"
+              src="./assets/img/home-image.png"
+              alt="home image"
+            />
+          </div>
+          <div class="text-center md:basis-1/2 md:text-start lg:basis-3/5">
+            <h1 class="hometitle">HAPPY TUMMY WITH TASTY BURGERS</h1>
+            <div class="separator mx-auto md:mx-0"></div>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              iure ipsam rerum, veritatis fugiat perferendis deserunt et
+              repudiandae ratione, ab dolor nam maxime minima nesciunt. Quam
+              amet odio error fugiat!
+            </p>
+
+            <div
+              class="text-base flex items-center justify-center gap-4 py-10 md:justify-start md:gap-20"
+            >
+              <div class="text-center">
+                <i
+                  class="fa-solid fa-utensils text-secondaryColor text-4xl"
+                ></i>
+                <br />
+                Delicious
+              </div>
+              <div class="text-center">
+                <i class="fa-solid fa-droplet text-secondaryColor text-4xl"></i>
+                <br />
+                Fresh
+              </div>
+
+              <div class="text-center">
+                <i class="fa-solid fa-envira text-secondaryColor text-4xl"></i>
+                <br />
+                Organic
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
+      <section id="category"></section>
+
+      <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
+      <section id="promo"></section>
+
+      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+      <section id="about"></section>
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+      <section id="menu"></section>
+
+      <!--~~~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~-->
+      <section id="review"></section>
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+      <section id="contact"></section>
+    </main>
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer>
+      <section class="footer"></section>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="main.js"></script>
   </body>
 </html>
