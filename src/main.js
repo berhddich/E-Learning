@@ -18,3 +18,15 @@ hamburger.addEventListener('click',()=>{
 closenav.addEventListener('click',()=>{
     mobileMenu.classList.add('hidden');
 })
+
+const tabs=document.querySelectorAll('.tabs_wrap ul li');
+tabs.forEach(tab => {
+    tab.addEventListener('click',()=>{
+        tabs.forEach(element => {
+            element.classList.remove('active')
+    
+          });
+          tab.classList.add('active')
+
+    })
+});
