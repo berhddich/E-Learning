@@ -5,7 +5,7 @@
 
 @layer base {
     body {
-        @apply text-whiteColor bg-primaryColor tracking-wider font-dmsans p-4 md:p-0;
+        @apply text-whiteColor bg-primaryColor tracking-wider font-dmsans px-1;
 
     }
 
