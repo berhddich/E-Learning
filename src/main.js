@@ -1,3 +1,4 @@
+// import Swiper bundle with all modules installed
 const hamburger=document.getElementById('hamburger');
 const mobileMenu=document.getElementById('mobileMenu')
 const closenav=document.getElementById('closenav')
